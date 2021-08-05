@@ -1,0 +1,25 @@
+{
+  "name": "yarn-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "copy": "cp src/manifest.json dist/ && cp src/popup.html dist/",
+    "build": "parcel build src/popup.js -d dist/ -o popup --no-minify && npm run copy",
+    "watch": "npm run copy && parcel watch src/popup.js --hmr-hostname localhost -d dist/src/ -o popup"
+  },
+  "author": "SajjadAliZaidi",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "clang-format": "^1.5.0",
+    "parcel-bundler": "^1.12.5"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
